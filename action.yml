@@ -1,0 +1,27 @@
+name: "APIsec University powered Dynamic API vulnerability scans"
+description: "APIsec.ai powered free vulnerability scanning"
+inputs:
+  base_url:
+    description: "The target DNS where the API is hosted. eg. https://myserviceapi.com"
+    required: true
+  specification_path:
+    description: "The relative path of the openapi specification in the repository where the action is hosted."
+    required: true
+  apisecu_token:
+    description: "The token obtained from apisec university to configure the action"
+    required: true
+  enable_info:
+    description: "Logging details with severity INFO is enabled by default. Set 'False' to disable."
+    required: false
+  fail_on_error_threshold:
+    description: "Fail the action if the error threshold exceeds the set limit. Does not fail unless a threshold is set"
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.base_url }}
+    - ${{ inputs.specification_path }}
+    - ${{ inputs.apisecu_token }}
+    - ${{ inputs.enable_info }}
+    - ${{ inputs.fail_on_error_threshold }}
