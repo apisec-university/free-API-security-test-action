@@ -34,7 +34,7 @@ NOTE: The action accepts JSON and YAML representations of the OpenAPI specificat
 
 ### `apisecu_token` - ![](https://img.shields.io/badge/Required-red)
 
-The token obtained from apisec university to configure the action. Visit `https://www.apisecuniversity.com/tools/ci-cd` to obtain a token.
+The token obtained from apisec university to configure the action. Visit `https://www.apisecuniversity.com/api-tools-and-resources/cicd` to obtain a token.
 
 ### `enable_info` - ![](https://img.shields.io/badge/Optional-blue)
 
