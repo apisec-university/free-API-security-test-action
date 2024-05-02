@@ -71,6 +71,7 @@ jobs:
         with:
           base_url: "<your-base-url-goes-here>"
           specification_path: "<your-openapi-specification-file-goes-here>"
+          apisecu_token: "<your-token-provided-by-apisec-university-goes-here>"
 ```
 
 ## Limitations
